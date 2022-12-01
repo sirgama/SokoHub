@@ -6,6 +6,7 @@ import {
   Link,
 } from "react-router-dom";
 import Landing from './pages/Landing/Landing';
+import Lands from './pages/Landing/Lands';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Landing />} />
-      <Route path="users/*" element={<Users />} />
+      <Route path="lands/*" element={<Lands />} />
     </Routes>
   </BrowserRouter>
   )
