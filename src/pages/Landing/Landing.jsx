@@ -3,6 +3,7 @@ import About from './components/About'
 import HeroLanding from './components/HeroLanding'
 import Info from './components/Info'
 import NavbarLanding from './components/NavbarLanding'
+import Services from './components/Services'
 
 export default function Landing() {
   return (
@@ -10,6 +11,7 @@ export default function Landing() {
       <NavbarLanding />
       <HeroLanding />
       <About />
+      <Services />
     </div>
   )
 }
