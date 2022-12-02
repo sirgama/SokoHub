@@ -9,6 +9,7 @@ export default function Footer() {
 <div className="md:flex md:justify-between">
   <div className="mb-6 md:mb-0">
       <a href="https://flowbite.com/" className="flex items-center">
+      <img src="https://www.svgrepo.com/show/214935/plant.svg" className="h-6 mr-1 sm:h-10" alt="SokoHub Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-emerald-900">SokoHub</span>
       </a>
       <p className="text-emerald-900 font-normal text-sm sm:w-1/3 py-6">Bridging the gap between farmers and investors. Plenty of food for everyone.</p>
