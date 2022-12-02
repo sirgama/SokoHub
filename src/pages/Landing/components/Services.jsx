@@ -15,7 +15,7 @@ export default function Services() {
                 <p className="text-gray-300 font-normal text-sm">An interactive dashboard for farmers to interact with their farm and find resources related tofarming and agriculture.</p>
                 <Link to=''><div className="bg-green-50 text-gray-700 font-semibold cursor-pointer md:px-8 py-3 my-6 rounded-2xl mx-auto text-center">Learn More</div> </Link>
             </div>
-            <div className=" bg-green-900 rounded-3xl md:w-[30%] py-6 px-6 md:px-8 m-2 text-white hover:bg-green-900  transition ease-in-out duration-150 ">
+            <div className=" bg-green-900 rounded-3xl md:w-[30%] py-6 px-6 md:px-8 m-2 text-white hover:bg-[#715439]  transition ease-in-out duration-150 ">
                 <h1 className="text-5xl font-bold p-4">02</h1>
                 <h3 className=" text-xl my-2 font-semibold">Investor dashboard</h3>
                 <p className="text-gray-300 font-normal text-sm">Dashboard for investors to view the status of their investment.</p>
@@ -27,7 +27,7 @@ export default function Services() {
                 <p className="text-gray-300 font-normal text-sm">A collection of land available for rent for a period of farming time. This also includes cost of the land and location</p>
                 <Link to=''><div className="bg-green-50 text-gray-700 font-semibold cursor-pointer md:px-8 py-3 my-6 rounded-2xl mx-auto text-center">View available land</div> </Link>
             </div>
-            <div className=" bg-green-900 rounded-3xl md:w-[30%] py-6 px-6 md:px-8 m-2 text-white hover:bg-green-900  transition ease-in-out duration-150 ">
+            <div className=" bg-green-900 rounded-3xl md:w-[30%] py-6 px-6 md:px-8 m-2 text-white hover:bg-[#715439]  transition ease-in-out duration-150 ">
                 <h1 className="text-5xl font-bold p-4">04</h1>
                 <h3 className=" text-xl my-2 font-semibold">Leaser Portal</h3>
                 <p className="text-gray-300 font-normal text-sm">A portal for land owners who want to rent out their land for farming.</p>
@@ -39,7 +39,7 @@ export default function Services() {
                 <p className="text-gray-300 font-normal text-sm">Affordable methods for farming for urban dwellers.</p>
                 <Link to=''><div className="bg-green-50 text-gray-700 font-semibold cursor-pointer md:px-8 py-3 my-10 rounded-2xl mx-auto text-center">View options</div> </Link>
             </div>
-            <div className=" bg-green-900 rounded-3xl md:w-[30%] py-6 px-6 md:px-8 m-2 text-white hover:bg-green-800  transition ease-in-out duration-150 ">
+            <div className=" bg-green-900 rounded-3xl md:w-[30%] py-6 px-6 md:px-8 m-2 text-white hover:bg-[#715439]  transition ease-in-out duration-150 ">
                 <h1 className="text-5xl font-bold p-4">06</h1>
                 <h3 className=" text-xl my-2 font-semibold">SokoChanga</h3>
                 <p className="text-gray-300 font-normal text-sm">A pay as you go system fr farmers to afford smart technologies to improve their farming.</p>
