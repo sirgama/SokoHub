@@ -25,7 +25,7 @@ export default function Services() {
                 <h1 className="text-5xl font-bold p-4">03</h1>
                 <h3 className=" text-xl my-2 font-semibold">SokoLands</h3>
                 <p className="text-gray-300 font-normal text-sm">A collection of land available for rent for a period of farming time. This also includes cost of the land and location</p>
-                <Link to=''><div className="bg-green-50 text-gray-700 font-semibold cursor-pointer md:px-8 py-3 my-6 rounded-2xl mx-auto text-center">View available land</div> </Link>
+                <Link to='/lands'><div className="bg-green-50 text-gray-700 font-semibold cursor-pointer md:px-8 py-3 my-6 rounded-2xl mx-auto text-center">View available land</div> </Link>
             </div>
             <div className=" bg-green-900 rounded-3xl md:w-[30%] py-6 px-6 md:px-8 m-2 text-white hover:bg-[#715439]  transition ease-in-out duration-150 ">
                 <h1 className="text-5xl font-bold p-4">04</h1>

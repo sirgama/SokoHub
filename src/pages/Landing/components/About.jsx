@@ -5,7 +5,7 @@ export default function About() {
     <div>
       <div className=' mx-auto max-w-screen-2xl py-2 md:py-4 px-2 lg:px-2 lg:py-0 rounded-3xl mt-6'>
       <p className="text-green-800/75 px-2 md:px-20 font-bold pt-8">- About us</p>
-        <h1 className="text-[#715439] text-3xl md:text-6xl font-extrabold px-2 md:px-20 md:py-8 py-4 md:leading-tight "><span className="text-green-900">SOKOHUB</span> IS ON A JOURNEY TOWARDS PROVIDING TECHNOLOGY AND BRIDGING THE GAP BETWEEN INVESTORS AND FARMERS. </h1>
+        <h1 className="text-[#715439] text-3xl md:text-6xl font-extrabold px-2 md:px-20 md:py-8 py-4 md:leading-tight "><span className="text-green-900">SOKOHUB</span> IS ON A JOURNEY TOWARDS PROVIDING TECHNOLOGY TO SUSTAINABLE FOOD PRODUCTION AND BRIDGING THE GAP BETWEEN INVESTORS AND FARMERS. </h1>
         <p className="text-[#715439] px-2 md:px-20 text-3xl underline underline-offset-8 font-bold  text-center md:mt-16 md:mb-10">Mission</p>
         <div className="flex flex-row justify-around px-2 md:px-20 md:py-8 py-4 md:leading-tight text-white text-center">
             <div>
