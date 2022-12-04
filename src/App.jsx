@@ -7,8 +7,6 @@ import {
 } from "react-router-dom";
 import Landing from './pages/Landing/Landing';
 import Lands from './pages/Lands/Lands';
-import Login from './pages/Auth/Login';
-import Signup from './pages/Auth/Signup';
 import Register from './pages/Auth/Register';
 import LoginPage from './pages/Auth/LoginPage';
 
@@ -19,8 +17,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/lands" element={<Lands />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
       <Route path="/auth/signup" element={<Register />} />
       <Route path="/auth/login" element={<LoginPage />} />
     </Routes>
