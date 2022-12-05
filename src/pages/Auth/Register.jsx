@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import AuthContext from '../../context/Authcontext'
+import { useNavigate } from 'react-router-dom';
+import { UserAuth } from '../../context/Authcontext';
+
+
 
 export default function Register() {
+let navigate = useNavigate()
+    const [first_name, setFirstname] = useState("");
+    const [last_name, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [password1, setPassword1] = useState("");
+    const [password2, setPassword2] = useState("");
+    const [role, setRole] = useState("FARMER");
+    const { registerUser } = useContext(AuthContext);
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        registerUser(email, first_name, last_name, password1, password2, role);
+        
+      };
+console.log(role,password1, password2, email, first_name, last_name)
   return (
     <div>
       <div class="bg-white font-family-karla h-screen">
@@ -19,38 +39,38 @@ export default function Register() {
 
         <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
             <p class="text-center text-3xl">Join Us.</p>
-            <form class="flex flex-col pt-3 md:pt-8" onsubmit="event.preventDefault();">
+            <form class="flex flex-col pt-3 md:pt-8" onSubmit={handleSubmit}>
                 <div class="flex flex-col pt-4">
                     <label for="name1" class="text-sm">First Name</label>
-                    <input type="text" id="name1" placeholder="Gamaliel" class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required/>
+                    <input type="text" id="name1" placeholder="John" onChange={e => setFirstname(e.target.value)} class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required/>
                 </div>
                 <div class="flex flex-col pt-4">
                     <label for="name2" class="text-sm">Last Name</label>
-                    <input type="text" id="name2" placeholder=" Sirengo" class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required/>
+                    <input type="text" id="name2" placeholder=" Doe" onChange={e => setLastname(e.target.value)} class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required/>
                 </div>
 
                 <div class="flex flex-col pt-4">
                     <label for="email" class="text-sm">Email</label>
-                    <input type="email" id="email" placeholder="your@email.com" class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required/>
+                    <input type="email" id="email" placeholder="your@email.com" onChange={e => setEmail(e.target.value)} class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required/>
                 </div>
 
                 <div class="flex flex-col pt-4">
                     <label for="password" class="text-sm">Password</label>
-                    <input type="password" id="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required />
+                    <input type="password" id="password" placeholder="Password" onChange={e => setPassword1(e.target.value)} class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required />
                 </div>
 
                 <div class="flex flex-col pt-4">
                     <label for="confirm-password" class="text-sm">Confirm Password</label>
-                    <input type="password" id="confirm-password" placeholder="Password" class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required />
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" onChange={e => setPassword2(e.target.value)} class="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" required />
                 </div>
 
                 <div className="flex flex-col pt-4">
                 <label for="role" class="text-sm">Register as:</label>
-                <select class="border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight " name="role" id="role">
-                    <option value="farmer">Farmer</option>
-                    <option value="investor">Investor</option>
-                    <option value="leaser">Leaser</option>
-                    <option value="admin">Admin</option>
+                <select defaultValue={role} onChange={e => setRole(e.target.value)} class="border rounded w-full py-1 px-3 text-gray-700 mt-1 leading-tight " name="role" id="role">
+                    <option value="FARMER">Farmer</option>
+                    <option value="INVESTOR">Investor</option>
+                    <option value="LEASER">Leaser</option>
+                    <option value="ADMIN">Admin</option>
                 </select>
                 </div>
 

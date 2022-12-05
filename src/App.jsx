@@ -9,10 +9,12 @@ import Landing from './pages/Landing/Landing';
 import Lands from './pages/Lands/Lands';
 import Register from './pages/Auth/Register';
 import LoginPage from './pages/Auth/LoginPage';
+import { AuthProvider } from './context/Authcontext';
 
 function App() {
 
   return (
+    <AuthProvider>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Landing />} />
@@ -21,6 +23,7 @@ function App() {
       <Route path="/auth/login" element={<LoginPage />} />
     </Routes>
   </BrowserRouter>
+  </AuthProvider>
   )
 }
 

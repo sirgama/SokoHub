@@ -1,7 +1,8 @@
 
 import React, { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
-import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
@@ -23,7 +24,6 @@ export const AuthProvider = ({children}) =>{
 
 const [loading, setLoading] = useState(true);
 
-const history = useHistory();
 
  const loginUser = async (username, password) => {
     const response = await fetch("http://127.0.0.1:8000/auth/login/", {
@@ -42,29 +42,49 @@ const history = useHistory();
       setAuthTokens(data);
       setUser(jwt_decode(data.access));
       localStorage.setItem("authTokens", JSON.stringify(data));
-      history.push("/");
+      
     } else {
       alert("Something went wrong!");
     }
   };
 
-  const registerUser = async (first_name,last_name, email, password1, password2,role) => {
-    const response = await fetch("http://127.0.0.1:8000/api/register/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        email,
-        password1,
-        password2,
-        role
+  const registerUser =  (email, first_name,last_name, password1, password2, role) => {
+    axios({
+        method: 'POST',
+        url: 'http://127.0.0.1:8000/auth/signup/',
+        headers: {
+            "Content-Type": "application/json"
+          },
+        data: {
+            email,
+            first_name,
+            last_name,
+            password1,
+            password2,
+            role
+        }
+      }).then(function (response) {
+        console.log(response);
       })
-    });
+      .catch(function (error) {
+        console.log(error);
+      });
+    // const response =  fetch("http://127.0.0.1:8000/auth/signup/", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: {
+    //     email,
+    //     first_name,
+    //     last_name,
+    //     password1,
+    //     password2,
+    //     role
+    //   }
+    // });
     if (response.status === 201) {
-      history.push("/login");
+     
     } else {
       alert("Something went wrong!");
     }
@@ -75,7 +95,7 @@ const history = useHistory();
     setAuthTokens(null);
     setUser(null);
     localStorage.removeItem("authTokens");
-    history.push("/");
+   
   };
 
   const contextData = {
@@ -100,4 +120,7 @@ const history = useHistory();
     </AuthContext.Provider>
   );
 
+}
+export function UserAuth(){
+    return useContext(AuthContext)
 }
