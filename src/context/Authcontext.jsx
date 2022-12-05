@@ -2,7 +2,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
@@ -48,47 +48,72 @@ const [loading, setLoading] = useState(true);
     }
   };
 
-  const registerUser =  (email, first_name,last_name, password1, password2, role) => {
-    axios({
-        method: 'POST',
-        url: 'http://127.0.0.1:8000/auth/signup/',
-        headers: {
-            "Content-Type": "application/json"
-          },
-        data: {
-            email,
-            first_name,
-            last_name,
-            password1,
-            password2,
-            role
-        }
-      }).then(function (response) {
-        console.log(response);
+  const registerUser = async (email, first_name,last_name, password1, password2, role) => {
+    const response = await fetch("http://127.0.0.1:8000/auth/signup/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email,
+        first_name,
+        last_name,
+        password1,
+        password2,
+        role
       })
-      .catch(function (error) {
-        console.log(error);
-      });
-    // const response =  fetch("http://127.0.0.1:8000/auth/signup/", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: {
-    //     email,
-    //     first_name,
-    //     last_name,
-    //     password1,
-    //     password2,
-    //     role
-    //   }
-    // });
+    });
     if (response.status === 201) {
-     
+        <Navigate to="/auth/login" />
     } else {
-      alert("Something went wrong!");
+      console.error("Something went wrong!");
     }
   };
+
+
+//    const registerUser = async (email, first_name,last_name, password1, password2, role) => {
+//     await axios({
+//         method: 'POST',
+//         url: 'http://127.0.0.1:8000/auth/signup/',
+//         headers: {
+//             "Content-Type": "application/json"
+//           },
+//         data: {
+//             email,
+//             first_name,
+//             last_name,
+//             password1,
+//             password2,
+//             role
+//         }
+//       }).then(function (response) {
+//         console.log(response);
+//         <Navigate to="/auth/login" />
+
+//       })
+//       .catch(function (error) {
+//         console.log(error);
+//       });
+//     const response =  fetch("http://127.0.0.1:8000/auth/signup/", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: {
+//         email,
+//         first_name,
+//         last_name,
+//         password1,
+//         password2,
+//         role
+//       }
+//     });
+//     if (response.status === 201) {
+     
+//     } else {
+//       alert("Something went wrong!");
+//     }
+//   };
 
 
   const logoutUser = () => {

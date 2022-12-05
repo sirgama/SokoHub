@@ -15,13 +15,23 @@ let navigate = useNavigate()
     const [password2, setPassword2] = useState("");
     const [role, setRole] = useState("FARMER");
     const { registerUser } = useContext(AuthContext);
+    const [errorr, setError] = useState("");
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
-        registerUser(email, first_name, last_name, password1, password2, role);
+        
+        setError("");
+        try {
+          await registerUser(email, first_name, last_name, password1, password2, role);
+          navigate("/auth/login");
+        } catch (error) {
+          console.log(error);
+          setError(error.message);
+        }
         
       };
-console.log(role,password1, password2, email, first_name, last_name)
+
+      
   return (
     <div>
       <div class="bg-white font-family-karla h-screen">
