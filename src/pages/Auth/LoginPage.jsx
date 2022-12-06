@@ -27,11 +27,11 @@ export default function LoginPage() {
       };
     const routeUser = () => {
       if(user.role === 'LEASER'){
-        navigate('/dashboard/leaser')
+        navigate('/dashboard/leaser/home')
       } else if(user.role === 'INVESTOR'){
-        navigate('/dashboard/investor')
+        navigate('/dashboard/investor/home')
       }else{
-        navigate('/dashboard/farmers')
+        navigate('/dashboard/farmers/home')
       }
     }
   return (

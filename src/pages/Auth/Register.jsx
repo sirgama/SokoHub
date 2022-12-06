@@ -94,7 +94,7 @@ let navigate = useNavigate()
     </div>
 
     <div class="w-1/2 shadow-2xl">
-        <img class="object-cover w-full h-screen hidden md:block" src="https://www.delreport.com/wp-content/uploads/2018/10/cocoa-magnum-fjona-hill-2_Fotor.jpg" alt="Background" />
+        <img class="object-cover w-full h-screen hidden md:block" src="https://images.pexels.com/photos/4750261/pexels-photo-4750261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Background" />
     </div>
 </div>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useContext } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate, Outlet } from 'react-router-dom';
 import AuthContext from '../../context/Authcontext';
 import SidebarLeaser from './components/SidebarLeaser'
 
@@ -10,14 +10,13 @@ export default function Leaser() {
     let navigate = useNavigate()
    
   return (
-    <div>
+    <div className='flex flex-col-reverse md:flex-row'>
 
-      <div>
+      <div className='h-screen my-auto flex flex-col justify-center'>
         <SidebarLeaser />
       </div>
       <div>
-      <h1>{user.role}</h1>
-      <button onClick={logoutUser} className='bg-blue-400 px-8 py-2'>Log out</button>
+      <Outlet />
       </div>
 
     </div>

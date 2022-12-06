@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import AuthContext from '../../context/Authcontext';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, redirect  } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export default function Farmer() {
     const { user, logoutUser } = useContext(AuthContext);
-   
+     console.log(user)
 
   return (
     <div>

@@ -7,7 +7,7 @@ import AuthContext from '../../context/Authcontext';
 export default function Investor() {
   const { user, logoutUser } = useContext(AuthContext);
     let navigate = useNavigate()
-    
+   
   return (
     <div>
       

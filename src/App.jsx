@@ -14,6 +14,9 @@ import Farmer from './pages/Dashboard/Farmer';
 import PrivateRoute from './utils/PrivateRoute';
 import Investor from './pages/Dashboard/Investor';
 import Leaser from './pages/Dashboard/Leaser';
+import Dashboard from './pages/Dashboard/Leaser/Dashboard';
+import MyLands from './pages/Dashboard/Leaser/MyLands';
+import Contracts from './pages/Dashboard/Leaser/Contracts';
 
 function App() {
 
@@ -25,7 +28,12 @@ function App() {
       <Route path="/lands" element={<Lands />} />
       <Route path="/dashboard/farmers" element={<PrivateRoute><Farmer /></PrivateRoute>} />
       <Route path="/dashboard/investor" element={<PrivateRoute><Investor /></PrivateRoute>} />
-      <Route path="/dashboard/leaser" element={<PrivateRoute><Leaser /></PrivateRoute>} />
+      <Route path="/dashboard/leaser" element={<PrivateRoute><Leaser /></PrivateRoute>}>
+        <Route path='home' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+        <Route path='contracts' element={<PrivateRoute><Contracts /></PrivateRoute>} />
+        <Route path='lands' element={<PrivateRoute><MyLands /></PrivateRoute>} />
+
+      </ Route>
       <Route path="/auth/signup" element={<Register />} />
       <Route path="/auth/login" element={<LoginPage />} />
 
