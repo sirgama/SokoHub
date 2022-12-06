@@ -5,26 +5,35 @@ import AuthContext from '../../context/Authcontext'
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
-
-    let navigate = useNavigate()
-    const { loginUser } = useContext(AuthContext);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [errorr, setError] = useState("");
+  const { user } = useContext(AuthContext);
+  let navigate = useNavigate()
+  const { loginUser } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorr, setError] = useState("");
+    
 
     const handleSubmit = async e => {
         e.preventDefault();
         setError("");
         try {
           await loginUser(email, password);
-          navigate("/farmers");
+          setTimeout(routeUser, 50)
         } catch (error) {
           console.log(error);
           setError(error.message);
         }
         
       };
-console.log(email, password)
+    const routeUser = () => {
+      if(user.role === 'LEASER'){
+        navigate('/dashboard/leaser')
+      } else if(user.role === 'INVESTOR'){
+        navigate('/dashboard/investor')
+      }else{
+        navigate('/dashboard/farmers')
+      }
+    }
   return (
     <div>
       <div className="bg-white font-family-karla h-screen">
