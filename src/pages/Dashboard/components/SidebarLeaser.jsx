@@ -9,7 +9,7 @@ export default function SidebarLeaser() {
 
 
   return (
-    <div className='md:w-64 h-full bg-[#eek5d7] shadow-2xl rounded-lg'>
+    <div className='md:w-64 h-full bg-[#eek5d7] shadow-2xl rounded-lg sticky'>
         <a href="#" class="flex items-center pl-2.5  mt-10">
          <img src="https://www.svgrepo.com/show/214935/plant.svg" class="mr-3 h-6 sm:h-7" alt="Flowbite Logo" />
          <span class="self-center text-2xl font-medium font-sans whitespace-nowrap dark:text-green-800">SokoHub</span>

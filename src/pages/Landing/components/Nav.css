@@ -6,7 +6,7 @@
     margin: 0 auto;
     background-position: center center;
     background-size: cover;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/4947043/pexels-photo-4947043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: linear-gradient(0deg, rgba(0.5, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/11573790/pexels-photo-11573790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   
 }
 #overlay {
