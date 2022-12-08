@@ -8,7 +8,7 @@ export default function Contracts() {
   return (
     <div>
         <Nav />
-        <h1 className="text-center font-semibold  underline underline-offset-8 mx-20 text-3xl">Your Contracts</h1>
+        <h1 className="text-center font-semibold  underline underline-offset-8 mx-20 text-3xl">My Contracts</h1>
         <div className='w-auto h-auto p-5 flex flex-col justify-center items-center'>
         <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

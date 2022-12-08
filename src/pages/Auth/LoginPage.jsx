@@ -34,6 +34,8 @@ export default function LoginPage() {
         navigate('/dashboard/farmers/home')
       }
     }
+
+    console.log(password)
   return (
     <div>
       <div className="bg-white font-family-karla h-screen">
@@ -45,7 +47,7 @@ export default function LoginPage() {
         <div className="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24">
         <a href="#" className="flex items-center">
       <img src="https://www.svgrepo.com/show/214935/plant.svg" className="h-6 mr-1 sm:h-10" alt="SokoHub Logo" />
-      <span className="self-center text-2xl font-medium font-sans whitespace-nowrap dark:text-green-800">SokoHub</span>
+      <span className="self-center text-2xl font-medium font-sans whitespace-nowrap dark:text-green-800">SokoHub {password}</span>
   </a>
         </div>
 
