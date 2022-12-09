@@ -80,7 +80,7 @@ let navigate = useNavigate()
                     <option value="FARMER">Farmer</option>
                     <option value="INVESTOR">Investor</option>
                     <option value="LEASER">Leaser</option>
-                    <option value="ADMIN">Admin</option>
+                    {/* <option value="ADMIN">Admin</option> */}
                 </select>
                 </div>
 

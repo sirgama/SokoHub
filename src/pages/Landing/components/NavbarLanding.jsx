@@ -5,7 +5,7 @@ export default function NavbarLanding() {
   return (
     <div>
       
-<nav className="bg-[#eee5d7] border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-[#eee5d7]">
+<nav className="bg-inherit border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-[#eee5d7]">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
   <a href="#" className="flex items-center">
       <img src="https://www.svgrepo.com/show/214935/plant.svg" className="h-6 mr-1 sm:h-10" alt="SokoHub Logo" />
