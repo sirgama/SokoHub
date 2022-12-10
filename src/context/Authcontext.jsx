@@ -26,7 +26,7 @@ const [loading, setLoading] = useState(true);
 
 
  const loginUser = async (username, password) => {
-    const response = await fetch("http://127.0.0.1:8000/auth/login/", {
+    const response = await fetch("https://sokohub.up.railway.app/auth/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -49,7 +49,7 @@ const [loading, setLoading] = useState(true);
   };
 
   const registerUser = async (email, first_name,last_name, password1, password2, role) => {
-    const response = await fetch("http://127.0.0.1:8000/auth/signup/", {
+    const response = await fetch("https://sokohub.up.railway.app/auth/signup/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

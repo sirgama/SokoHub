@@ -14,7 +14,7 @@ export default function Dashboard() {
     }
 
     const getLands = () => {
-        axios.get(`http://127.0.0.1:8000/lessor/land/`,   headers   ).then((res) => {
+        axios.get(`https://sokohub.up.railway.app/lessor/land/`,   headers   ).then((res) => {
                     setLands(res.data);
          
         });

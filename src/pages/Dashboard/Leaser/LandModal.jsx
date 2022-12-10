@@ -16,7 +16,7 @@ export default function LandModal({setModal}) {
     const owner = user.id
 
     const handlesubmit = async () => {
-        const response = await fetch("http://127.0.0.1:8000/lessor/land/", {
+        const response = await fetch("https://sokohub.up.railway.app/lessor/land/", {
       method: "POST",
       headers: {
         'Authorization': `Bearer ${user.jti}`,
