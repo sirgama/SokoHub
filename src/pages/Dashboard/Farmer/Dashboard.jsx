@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import AuthContext from '../../../context/Authcontext';
 import {FcBullish, FcLineChart, FcAbout, FcCloseUpMode, FcLandscape, FcCloth, FcViewDetails} from 'react-icons/fc'
 import Farmstable from './Farmstable';
+import Cropslist from './Cropslist';
 
 export default function FDashboard() {
     const { user, logoutUser } = useContext(AuthContext);
@@ -43,12 +44,12 @@ export default function FDashboard() {
                     </div>
             </div>
         </div>
-        <div className="w-full rounded-2xl mt-4 flex flex-row ">
-            <div className="w-5/12 bg-white">
+        <div className="w-full rounded-3xl mt-4 flex flex-row justify-around">
+            <div className="w-6/12 bg-white flex justify-center rounded-3xl">
                 <Farmstable />
             </div>
-            <div className="w-4/12 bg-white">
-
+            <div className="w-5/12 bg-white flex justify-center rounded-3xl">
+                <Cropslist />
             </div>
         </div>
     </div>
