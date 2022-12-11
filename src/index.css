@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 body{
-    background: rgb(200,124,193);
-background: linear-gradient(90deg, rgba(200,124,193,0.35057773109243695) 0%, rgba(189,124,200,0.35898109243697474) 51%, rgba(124,140,200,0.38699229691876746) 100%);
+    background: #fefefe;
     font-family: 'Poppins', sans-serif;
 }
