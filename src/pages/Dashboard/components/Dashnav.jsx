@@ -14,7 +14,7 @@ export default function Dashnav() {
         <div class="lg:flex lg:items-center lg:justify-between">
             <div class="flex items-center justify-between">
                 <div class="text-xl font-semibold text-gray-700">
-                    <a class="text-2xl font-normal text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-xl hover:text-gray-700 dark:hover:text-gray-300" href='#' >  Hello, {user.first_name} {user.last_name} </a>
+                    <a class="text-2xl font-normal text-gray-800 transition-colors duration-300 transform dark:text-gray-800 font-sans lg:text-xl hover:text-gray-700 dark:hover:text-gray-900" href='#' >  Hello, {user.first_name} {user.last_name} </a>
                 </div>
 
                 <div class="flex lg:hidden">
@@ -40,9 +40,9 @@ export default function Dashnav() {
                     </button>
                     <button type="button" class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
                     
-                    <IoGift className='text-gray-200 w-6 h-6 mx-2 ' />
-                    <IoCogOutline className='text-gray-200 w-6 h-6 mx-2 ' />
-                    <IoChatboxEllipsesOutline className='text-gray-200 w-6 h-6 mx-2 mr-4 ' />
+                    <IoGift className='text-gray-800 w-6 h-6 mx-2 ' />
+                    <IoCogOutline className='text-gray-800 w-6 h-6 mx-2 ' />
+                    <IoChatboxEllipsesOutline className='text-gray-800 w-6 h-6 mx-2 mr-4 ' />
                         <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                             <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="object-cover w-full h-full" alt="avatar" />
                         </div>
