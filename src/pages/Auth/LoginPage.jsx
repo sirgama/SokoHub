@@ -31,7 +31,7 @@ export default function LoginPage() {
       } else if(user.role === 'INVESTOR'){
         navigate('/dashboard/investor')
       }else{
-        navigate('/dashboard/farmers')
+        navigate('/dashboard/farmers/home')
       }
     }
 

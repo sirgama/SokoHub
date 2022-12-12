@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
 import AuthContext from '../../../context/Authcontext';
 import Nav from './Nav';
+import {FcBullish, FcLineChart, FcAbout, FcCloseUpMode, FcLandscape, FcCloth, FcViewDetails} from 'react-icons/fc'
+import Farmstable from '../Farmer/Farmstable';
+import Cropslist from '../Farmer/Cropslist';
 
 export default function Dashboard() {
     const { user, logoutUser } = useContext(AuthContext);
@@ -27,171 +30,50 @@ export default function Dashboard() {
       console.log(lands)
 
   return (
-    <div>
-        <Nav />
-        <h1 className="text-2xl  text-center py-2 mb-5  underline underline-offset-8 font-bold">Summary</h1>
-        <div className="flex flex-row justify-around  mx-auto ">
-          
-        <div class="w-72 h-28 p-6 bg-white rounded-lg shadow-lg dark:bg-slate-400 dark:from-pink-500 dark:to-purple-400 dark:border-gray-700 bg-opacity-20 backdrop-blur-lg drop-shadow-lg">
-            {/* <svg class="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clip-rule="evenodd"></path><path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path></svg> */}
-            <a href="#">
-                <h5 class="mb-2 text-5xl text-center font-sans font-semibold tracking-tight text-gray-900 dark:text-white">{lands ? lands.length : 0}</h5>
-            </a>
-            <p class="mb-3 font-bold text-center text-gray-200 dark:text-gray-200">Your lands</p>
-           
-        </div>
-        <div class="w-72 h-28 p-6 bg-white rounded-lg shadow-lg dark:bg-slate-400 dark:from-pink-500 dark:to-purple-400 dark:border-gray-700 bg-opacity-20 backdrop-blur-lg drop-shadow-lg">
-            {/* <svg class="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clip-rule="evenodd"></path><path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path></svg> */}
-            <a href="#">
-                <h5 class="mb-2 text-5xl text-center font-sans font-semibold tracking-tight text-gray-900 dark:text-white">0</h5>
-            </a>
-            <p class="mb-3 font-bold text-center text-gray-200 dark:text-gray-200">Contracts</p>
-           
-        </div>
-        <div class="w-72 h-28 p-6 bg-white rounded-lg shadow-lg dark:bg-slate-400 dark:from-pink-500 dark:to-purple-400 dark:border-gray-700 bg-opacity-20 backdrop-blur-lg drop-shadow-lg">
-            {/* <svg class="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clip-rule="evenodd"></path><path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path></svg> */}
-            <a href="#">
-                <h5 class="mb-2 text-5xl text-center font-sans font-semibold tracking-tight text-gray-900 dark:text-white">145000</h5>
-            </a>
-            <p class="mb-3 font-bold text-center text-gray-200 dark:text-gray-200">Estimated Revenue in Kshs</p>
-           
-        </div>
-        </div>
-
-        <div className="flex flex-row justify-around  mx-auto ">
-          <div className='w-2/5'>
-            <div class="overflow-x-auto relative shadow-md sm:rounded-lg my-16">
-                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-200">
-                <thead className='text-xl font-extrabold text-gray-700 uppercase dark:text-gray-700 w-full py-5'><tr><th scope='col' className='py-3 px-6'>Recent contracts</th></tr></thead>
-                    <thead class="text-xs text-gray-700 uppercase bg-slate-50 dark:bg-gray-500 dark:text-gray-200">
-                        
-                        <tr>
-                            <th scope="col" class="py-3 px-6">
-                                Contract with
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                Start date
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                End Date
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                Status
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                <span class="sr-only">Edit</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b dark:bg-sky-900 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Victor George
-                            </th>
-                            <td class="py-4 px-6">
-                                11/01/2022
-                            </td>
-                            <td class="py-4 px-6">
-                                02/12/2024
-                            </td>
-                            <td class="py-4 px-6">
-                                Active
-                            </td>
-                            <td class="py-4 px-6 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="bg-white border-b dark:bg-sky-900 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Microsoft Surface Pro
-                            </th>
-                            <td class="py-4 px-6">
-                                White
-                            </td>
-                            <td class="py-4 px-6">
-                                Laptop PC
-                            </td>
-                            <td class="py-4 px-6">
-                                $1999
-                            </td>
-                            <td class="py-4 px-6 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-sky-900 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Magic Mouse 2
-                            </th>
-                            <td class="py-4 px-6">
-                                Black
-                            </td>
-                            <td class="py-4 px-6">
-                                Accessories
-                            </td>
-                            <td class="py-4 px-6">
-                                $99
-                            </td>
-                            <td class="py-4 px-6 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+    <div className='px-7 py-5'>
+        <h1 className="text-2xl  underline-offset-8 font-semibold">{user.role} Dashboard</h1>
+        <div className="bg-white mt-4 w-full h-48 rounded-2xl ">
+            <h1 className="font-semibold py-2 pl-14 ">Overview</h1>
+            <div className="flex flex-row justify-between">
+            <div className="w-3/12 h-32 bg-[#edf8f2] shadow m-auto rounded flex flex-row justify-around items-center">
+                        <div>
+                        <FcCloth className='text-4xl my-3' />
+                        <h1 className="text-black text-sm">My farms<FcAbout className='inline-block ml-1' /></h1>
+                        <h1 className='text-4xl my-2 font-bold'>3</h1>
+                        </div>
+                        <div className='flex flex-col items-center justify-center align-middle'>
+                            <FcLandscape className='text-6xl' />
+                        </div>
+                    </div>
+                    <div className="w-3/12 h-32 bg-[#ecf9ff] shadow m-auto rounded flex flex-row justify-around items-center">
+                        <div>
+                        <FcCloseUpMode className='text-4xl my-3' />
+                        <h1 className="text-black text-sm"> My Crops<FcAbout className='inline-block ml-1' /></h1>
+                        <h1 className='text-4xl my-2 font-bold'>4</h1>
+                        </div>
+                        <div className='flex flex-col items-center justify-center align-middle'>
+                            <FcViewDetails className='text-6xl' />
+                        </div>
+                    </div>
+                    <div className="w-3/12 h-32 bg-[#f2f0fe] shadow m-auto rounded flex flex-row justify-around items-center">
+                        <div>
+                        <FcBullish className='text-4xl my-3' />
+                        <h1 className="text-black text-sm">Projected income<FcAbout className='inline-block ml-1' /></h1>
+                        <h1 className='text-4xl my-2 font-bold'>128k</h1>
+                        </div>
+                        <div className='flex flex-col items-center justify-center align-middle'>
+                            <FcLineChart className='text-6xl' />
+                        </div>
+                    </div>
             </div>
-          </div>
-          <div className='w-2/5'>
-            <div class="overflow-x-auto relative shadow-md  my-16">
-                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-200">
-                  <thead className='text-xl font-extrabold text-gray-700 uppercase dark:text-gray-700 w-full py-5'><tr><th scope='col' className='py-3 px-6'>Lands summary</th></tr></thead>
-                    <thead class="text-xs text-gray-700 uppercase bg-slate-50 dark:bg-gray-500 dark:text-gray-200">
-                        
-                        <tr>
-                            <th scope="col" class="py-3 px-6">
-                                Land Location
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                Lease Duration
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                Price
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                Approved
-                            </th>
-                            <th scope="col" class="py-3 px-6">
-                                <span class="sr-only">Edit</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {lands.map(land => (
-                            <tr class="bg-white border-b dark:bg-sky-900 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                {land.location}
-                            </th>
-                            <td class="py-4 px-6">
-                                {land.lease_duration}
-                            </td>
-                           
-                            <td class="py-4 px-6">
-                                {land.price}
-                            </td>
-                            <td class="py-4 px-6">
-                                {land.approved ? 'Verified' : 'Not Verified'}
-                            </td>
-                            <td class="py-4 px-6 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-                        ))}
-                       
-                    </tbody>
-                </table>
+        </div>
+        <div className="w-full rounded-3xl mt-4 flex flex-row justify-around">
+            <div className="w-6/12 bg-white flex justify-center rounded-3xl">
+                <Farmstable />
             </div>
-          </div>
-          <div>
-            
-          </div>
+            <div className="w-5/12 bg-white flex justify-center rounded-3xl">
+                <Cropslist />
+            </div>
         </div>
     </div>
   )

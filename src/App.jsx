@@ -20,6 +20,8 @@ import Contracts from './pages/Dashboard/Leaser/Contracts';
 import FDashboard from './pages/Dashboard/Farmer/Dashboard';
 import FLandlist from './pages/Dashboard/Farmer/Landlist';
 import Croplist from './pages/Dashboard/Farmer/Croplist';
+import Profile from './pages/Dashboard/Profile';
+import Resources from './pages/Dashboard/Resources';
 
 function App() {
 
@@ -33,12 +35,16 @@ function App() {
         <Route path='home' element={<PrivateRoute><FDashboard /></PrivateRoute>} />
         <Route path='farms' element={<PrivateRoute><FLandlist /></PrivateRoute>} />
         <Route path='crops' element={<PrivateRoute><Croplist /></PrivateRoute>} />
+        <Route path='profile' element={<PrivateRoute><Profile /></PrivateRoute>} />
+        <Route path='resources' element={<PrivateRoute><Resources /></PrivateRoute>} />
       </Route>
       <Route path="/dashboard/investor" element={<PrivateRoute><Investor /></PrivateRoute>} />
       <Route path="/dashboard/leaser" element={<PrivateRoute><Leaser /></PrivateRoute>}>
         <Route path='home' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
         <Route path='contracts' element={<PrivateRoute><Contracts /></PrivateRoute>} />
         <Route path='lands' element={<PrivateRoute><MyLands /></PrivateRoute>} />
+        <Route path='profile' element={<PrivateRoute><Profile /></PrivateRoute>} />
+        <Route path='resources' element={<PrivateRoute><Resources /></PrivateRoute>} />
 
       </ Route>
       <Route path="/auth/signup" element={<Register />} />
