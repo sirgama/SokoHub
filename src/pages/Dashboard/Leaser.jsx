@@ -12,7 +12,7 @@ export default function Leaser() {
     let navigate = useNavigate()
    
   return (
-    <div className='flex flex-col-reverse md:flex-row container-lg'>
+    <div className='flex flex-col-reverse md:flex-row container-lg bg-emerald-50/50'>
 
     <div className=' my-auto flex flex-col justify-center'>
       <SidenavLeaser />

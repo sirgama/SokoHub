@@ -13,7 +13,6 @@ export default function MyLands() {
 
   return (
     <div>
-      <Nav />
       <div className="flex flex-row justify-between py-4">
         <h1 className="text-center font-semibold   underline-offset-8 mx-20 text-2xl">My Lands</h1>
         <div className="px-7 py-2 mr-20 bg-green-800 text-gray-200 font-semibold cursor-pointer hover:bg-emerald-700 rounded-xl" onClick={handleModal}>New Land</div>
