@@ -6,7 +6,7 @@ import './Profile.css'
 
 export default function Profile() {
     const { user, logoutUser } = useContext(AuthContext);
-    const [modal, setModal] = useState(true)
+    const [modal, setModal] = useState(false)
 
   const handleModal = () => setModal(true)
     
@@ -18,7 +18,7 @@ export default function Profile() {
         <div class="flex flex-wrap justify-center">
             <div class="w-full flex justify-center">
                 <div class="relative">
-                    <img src="https://github.com/creativetimofficial/soft-ui-dashboard-tailwind/blob/main/build/assets/img/team-2.jpg?raw=true" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]" />
+                    <img src="https://e7.pngegg.com/pngimages/371/667/png-clipart-computer-icons-user-profile-encapsulated-postscript-icon-black-rectangle-black-thumbnail.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]" />
                 </div>
             </div>
             <div class="w-full text-center mt-20">

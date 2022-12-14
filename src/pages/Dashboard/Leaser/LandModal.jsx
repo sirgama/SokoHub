@@ -15,30 +15,53 @@ export default function LandModal({setModal}) {
     const [approved, setApproved] = useState(false);
     const owner = user.id
 
-    const handlesubmit = async () => {
-        const response = await fetch("http://127.0.0.1:8000/lessor/land/", {
-      method: "POST",
+    // const handlesubmit = async () => {
+    //     const response = await fetch("http://127.0.0.1:8000/lessor/land/", {
+    //   method: "POST",
+    //   headers: {
+    //     'Authorization': `Bearer ${user.jti}`,
+    //     'Content-Type' : 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     location,
+    //     landNumber,
+    //     price,
+    //     leaseDuration,
+    //     length,
+    //     width,
+    //     approved,
+    //     owner
+    //   })
+    // });
+    // if (response.status === 201) {
+    //     setModal(false)
+    // } else {
+    //   console.error("Something went wrong!");
+    // }
+    // }
+
+    const handlesubmit = () => {
+      let useremail = user.username
+  var postData = {
+     
+      location: "bio",
+      id_number: idnumber
+    };
+    
+    let axiosConfig = {
       headers: {
-        'Authorization': `Bearer ${user.jti}`,
-        'Content-Type' : 'application/json'
-      },
-      body: JSON.stringify({
-        location,
-        landNumber,
-        price,
-        leaseDuration,
-        length,
-        width,
-        approved,
-        owner
-      })
-    });
-    if (response.status === 201) {
-        setModal(false)
-    } else {
-      console.error("Something went wrong!");
-    }
-    }
+          'Content-Type': 'application/json'
+      }
+    };
+    
+    axios.post(`http://127.0.0.1:8000/auth/profile/${user.id}/`, postData, axiosConfig)
+    .then((res) => {
+      console.log("RESPONSE RECEIVED: ", res);
+    })
+    .catch((err) => {
+      console.log("AXIOS ERROR: ", err);
+    })
+  }
 
 
   const cancelButtonRef = useRef(null)

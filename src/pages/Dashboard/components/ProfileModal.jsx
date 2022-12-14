@@ -1,4 +1,4 @@
-import { Fragment, useContext, useRef, useState } from 'react'
+import { Fragment, useContext, useEffect, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 import AuthContext from '../../../context/Authcontext';
@@ -14,6 +14,7 @@ export default function ProfileModal({setModal}) {
     const [bio, setBio] = useState("");
     const [profileimage, setProfileImage] = useState("");
     const owner = user.id
+    const [profile, setProfile]= useState([])
 
     // const handlesubmit = async () => {
     //     const response = await fetch(`http://127.0.0.1:8000/auth/profile/${user.id}/`, {
@@ -37,6 +38,21 @@ export default function ProfileModal({setModal}) {
     //   console.error("Something went wrong!");
     // }
     // }
+
+    useEffect(()=> {
+        axios.get(`http://127.0.0.1:8000/auth/profile/2`, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Authorization': `Basic <${user.jti}>`,
+            }
+          }).then((res) => {
+            console.log("RESPONSE RECEIVED: ", res);
+          })
+          .catch((err) => {
+            console.log("AXIOS ERROR: ", err);
+          })
+    },[])
+
     const handlesubmit = () => {
         let useremail = user.username
     var postData = {
@@ -46,17 +62,24 @@ export default function ProfileModal({setModal}) {
             first_name: firstname,
             last_name: lastname,
         },
-        bio: "bio",
+        bio: bio,
         id_number: idnumber
       };
       
       let axiosConfig = {
         headers: {
-            'Content-Type': 'application/json'
+            'Authorization': `Bearer ${user.jti}`,
+            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
         }
       };
+
       
-      axios.post(`http://127.0.0.1:8000/auth/profile/${user.id}/`, postData, axiosConfig)
+      axios.post(`http://127.0.0.1:8000/auth/profile/2/`, postData, {
+        headers: {
+            'Authorization': `Bearer ${user.jti}`,
+            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+        }
+      })
       .then((res) => {
         console.log("RESPONSE RECEIVED: ", res);
       })
@@ -64,7 +87,7 @@ export default function ProfileModal({setModal}) {
         console.log("AXIOS ERROR: ", err);
       })
     }
-
+console.log(user)
   const cancelButtonRef = useRef(null)
 
   return (

@@ -44,7 +44,7 @@ export default function Dashnav() {
                     <IoCogOutline className='text-gray-800 w-6 h-6 mx-2 ' />
                     <IoChatboxEllipsesOutline className='text-gray-800 w-6 h-6 mx-2 mr-4 ' />
                         <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="object-cover w-full h-full" alt="avatar" />
+                            <img src="https://e7.pngegg.com/pngimages/371/667/png-clipart-computer-icons-user-profile-encapsulated-postscript-icon-black-rectangle-black-thumbnail.png" class="object-cover w-full h-full" alt="avatar" />
                         </div>
 
 

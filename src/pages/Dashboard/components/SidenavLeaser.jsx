@@ -11,7 +11,7 @@ export default function SidenavLeaser() {
     <h2 className="text-3xl font-semibold font-sans text-center text-emerald-800 dark:text-emerald-900">SokoHub</h2>
 
     <div className="flex flex-col items-center mt-6 -mx-2">
-        <img className="object-cover w-24 h-24 mx-2 rounded-full" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar" />
+        <img className="object-cover w-24 h-24 mx-2 rounded-full" src="https://e7.pngegg.com/pngimages/371/667/png-clipart-computer-icons-user-profile-encapsulated-postscript-icon-black-rectangle-black-thumbnail.png" alt="avatar" />
         <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-800">{user.first_name} {user.last_name}</h4>
         <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-900">{user.username}</p>
     </div>
