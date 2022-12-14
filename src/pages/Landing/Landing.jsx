@@ -16,7 +16,7 @@ export default function Landing() {
       {/* <About />
       <Services />
       <CTA /> */}
-      <Footer />
+      <CTA />
     </div>
   )
 }

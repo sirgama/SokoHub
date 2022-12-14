@@ -28,7 +28,7 @@ export default function Landstable() {
 					</tr>
 				</thead>
 				<tbody>
-					<tr className="bg-gray-800">
+					<tr className="bg-sky-800">
 						<td className="p-3">
 							<div className="flex align-items-center">
 								<div className="ml-3">
@@ -53,7 +53,7 @@ export default function Landstable() {
 							
 						</td>
 					</tr>
-					<tr className="bg-gray-800">
+					<tr className="bg-sky-800">
 						<td className="p-3">
 							<div className="flex align-items-center">
 								<div className="ml-3">
@@ -78,7 +78,7 @@ export default function Landstable() {
 							
 						</td>
 					</tr>
-					<tr className="bg-gray-800">
+					<tr className="bg-sky-800">
 						<td className="p-3">
 							<div className="flex align-items-center">
 								<div className="ml-3">
@@ -103,7 +103,7 @@ export default function Landstable() {
 							
 						</td>
 					</tr>
-					<tr className="bg-gray-800">
+					<tr className="bg-sky-800">
 						<td className="p-3">
 							<div className="flex align-items-center">
 								<div className="ml-3">

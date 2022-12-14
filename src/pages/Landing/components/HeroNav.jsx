@@ -27,20 +27,20 @@ export default function HeroNav() {
                                         Home
                                     </a>
                                     <a
-                                        href="#"
+                                        href="#solutions"
                                         className="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6"
                                     >
                                         Solutions
                                     </a>
 
                                     <a
-                                        href="#"
+                                        href="#faq"
                                         className="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6"
                                     >
-                                        Pricing
+                                        FAQ
                                     </a>
                                     <a
-                                        href="#"
+                                        href="#start"
                                         className="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6"
                                     >
                                         Contact
@@ -73,8 +73,7 @@ export default function HeroNav() {
                                 </h1>
 
                                 <p className="text-gray-600 md:text-xl md:px-18">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit
-                                    hello.
+                                    
                                 </p>
 
                                 <div className="hidden md:block h-40 w-40 rounded-full bg-emerald-800 absolute right-0 bottom-0 -mb-64 -mr-48"></div>
