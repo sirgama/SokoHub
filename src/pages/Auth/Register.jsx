@@ -43,7 +43,7 @@ let navigate = useNavigate()
         <div class="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-12">
         <a href="#" className="flex items-center">
       <img src="https://www.svgrepo.com/show/214935/plant.svg" className="h-6 mr-1 sm:h-10" alt="SokoHub Logo" />
-      <span className="self-center text-2xl font-medium font-sans whitespace-nowrap dark:text-green-800">SokoHub</span>
+      <span className="self-center text-2xl font-medium  whitespace-nowrap dark:text-green-800">SokoHub</span>
   </a>
         </div>
 
@@ -94,7 +94,7 @@ let navigate = useNavigate()
     </div>
 
     <div class="w-1/2 shadow-2xl">
-        <img class="object-cover w-full h-screen hidden md:block" src="https://images.pexels.com/photos/4750261/pexels-photo-4750261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Background" />
+        <img class="object-cover w-full h-screen hidden md:block" src="https://raw.githubusercontent.com/sirgama/SokoHub/master/src/assets/Picture1.jpg?token=GHSAT0AAAAAAB4GNG3L4DNZOUMHKN6EC4ECY4ZWVRQ" alt="Background" />
     </div>
 </div>
 
