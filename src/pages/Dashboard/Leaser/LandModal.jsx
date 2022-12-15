@@ -54,7 +54,7 @@ export default function LandModal({setModal}) {
       }
     };
     
-    axios.post(`http://127.0.0.1:8000/auth/profile/${user.id}/`, postData, axiosConfig)
+    axios.post(`http://sokohub.up.railway.app/profile/${user.id}/`, postData, axiosConfig)
     .then((res) => {
       console.log("RESPONSE RECEIVED: ", res);
     })
