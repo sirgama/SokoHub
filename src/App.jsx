@@ -22,6 +22,7 @@ import FLandlist from './pages/Dashboard/Farmer/Landlist';
 import Croplist from './pages/Dashboard/Farmer/Croplist';
 import Profile from './pages/Dashboard/Profile';
 import Resources from './pages/Dashboard/Resources';
+import CropHealth from './pages/Dashboard/Farmer/CropHealth';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='crops' element={<PrivateRoute><Croplist /></PrivateRoute>} />
         <Route path='profile' element={<PrivateRoute><Profile /></PrivateRoute>} />
         <Route path='resources' element={<PrivateRoute><Resources /></PrivateRoute>} />
+        <Route path='crophealth' element={<PrivateRoute><CropHealth /></PrivateRoute>} />
       </Route>
       <Route path="/dashboard/investor" element={<PrivateRoute><Investor /></PrivateRoute>} />
       <Route path="/dashboard/leaser" element={<PrivateRoute><Leaser /></PrivateRoute>}>

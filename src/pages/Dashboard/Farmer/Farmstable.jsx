@@ -9,7 +9,7 @@ export default function Farmstable() {
     <div className="rounded-t mb-0 px-4 py-3 border-0">
       <div className="flex flex-wrap items-center">
         <div className="relative w-full px-4 max-w-full flex-grow flex-1">
-          <h3 className="font-semibold text-base text-blueGray-700">My Lands</h3>
+          <h3 className="font-semibold text-base text-blueGray-700">My Farms</h3>
         </div>
         <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
           <button className="bg-sky-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
@@ -32,16 +32,15 @@ export default function Farmstable() {
 						<td className="p-3">
 							<div className="flex align-items-center">
 								<div className="ml-3">
-									<div className="">Appple</div>
-									<div className="text-gray-300">mail@rgmail.com</div>
+									<div className="text-gray-300">Limuru</div>
 								</div>
 							</div>
 						</td>
 						<td className="p-3">
-							Technology
+							120
 						</td>
 						<td className="p-3 font-bold">
-							200.00$
+							184
 						</td>
 						<td className="p-3">
 							<span className="bg-green-400 text-gray-50 rounded-md px-2">available</span>

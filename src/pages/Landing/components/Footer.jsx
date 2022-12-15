@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div>
-        <footer aria-label="Site Footer" class="bg-gray-100">
+        <footer aria-label="Site Footer" class="bg-gray-200">
   <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="flex justify-center text-teal-600">
       <h1 className="text-3xl font-bold text-emerald-800">Sokohub</h1>

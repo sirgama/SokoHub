@@ -68,12 +68,15 @@ export default function LoginPage() {
             <div className="text-center pt-12 pb-12">
                 <p>Don't have an account? <Link to="/auth/signup" className="underline font-semibold">Register here.</Link></p>
             </div>
+            <div class="text-center ">
+                <p><Link to="/" class=" font-semibold">&#8592; Back home</Link></p>
+            </div>
         </div>
 
     </div>
 
     <div className="w-1/2 shadow-2xl">
-        <img className="object-cover w-full h-screen hidden md:block" src="https://raw.githubusercontent.com/sirgama/SokoHub/master/src/assets/Picture2.jpg?token=GHSAT0AAAAAAB4GNG3KZL7IW4OXT653CXGEY4ZWYNA" />
+        <img className="object-cover w-full h-screen hidden md:block" src="https://www.iwmi.cgiar.org/wp-content/uploads/2013/09/A-Kenyan-farmer-uses-a-mobile-phone-in-the-field-Neil-Palmer-CIAT.jpg" />
     </div>
 </div>
 

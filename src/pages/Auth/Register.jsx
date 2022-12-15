@@ -89,12 +89,15 @@ let navigate = useNavigate()
             <div class="text-center pt-12 pb-12">
                 <p>Already have an account? <Link to="/auth/login" class="underline font-semibold">Login here.</Link></p>
             </div>
+            <div class="text-center ">
+                <p><Link to="/" class=" font-semibold">&#8592; Back home</Link></p>
+            </div>
         </div>
 
     </div>
 
     <div class="w-1/2 shadow-2xl">
-        <img class="object-cover w-full h-screen hidden md:block" src="https://raw.githubusercontent.com/sirgama/SokoHub/master/src/assets/Picture1.jpg?token=GHSAT0AAAAAAB4GNG3L4DNZOUMHKN6EC4ECY4ZWVRQ" alt="Background" />
+        <img class="object-cover w-full h-screen hidden md:block" src="https://images.pexels.com/photos/8540244/pexels-photo-8540244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Background" />
     </div>
 </div>
 
