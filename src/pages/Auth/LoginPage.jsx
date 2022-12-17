@@ -5,9 +5,8 @@ import AuthContext from '../../context/Authcontext'
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
-  const { user } = useContext(AuthContext);
   let navigate = useNavigate()
-  const { loginUser } = useContext(AuthContext);
+  const { user, loginUser } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorr, setError] = useState("");

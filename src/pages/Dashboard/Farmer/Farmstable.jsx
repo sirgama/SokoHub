@@ -47,7 +47,7 @@ export default function Farmstable() {
 						</td>
 						<td className="p-3 ">
 							<a href="#" className="text-gray-400 hover:text-gray-100 mr-2">
-								<i className="material-icons-outlined text-base">visibility</i>
+								<i className="material-icons-outlined text-base">2</i>
 							</a>
 							
 						</td>

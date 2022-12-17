@@ -15,7 +15,7 @@ export default function Contracts() {
         <Nav />
         <div className="flex flex-row justify-between py-4">
         <h1 className="text-center font-semibold   underline-offset-8 mx-20 text-2xl">My Contracts</h1>
-        <div className="px-7 py-2 bg-green-800 text-gray-200 font-semibold cursor-pointer hover:bg-emerald-700 rounded-xl" onClick={handleModal}>New Contract</div>
+        <div className="px-7 py-2  text-gray-200 font-semibold cursor-pointer hover:bg-emerald-700 rounded-xl" onClick={handleModal}></div>
         {modal && <LandModal setModal={setModal} />}
         </div>
         <div className='w-auto h-auto p-5 flex flex-col justify-center items-center'>

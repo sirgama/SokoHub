@@ -54,7 +54,7 @@ export default function LandModal({setModal}) {
       }
     };
     
-    axios.post(`http://sokohub.up.railway.app/profile/${user.id}/`, postData, axiosConfig)
+    axios.post(`https://sokohub.up.railway.app/profile/${user.id}/`, postData, axiosConfig)
     .then((res) => {
       console.log("RESPONSE RECEIVED: ", res);
     })

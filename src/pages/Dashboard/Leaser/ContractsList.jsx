@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Contractslist() {
   return (
@@ -12,7 +13,7 @@ export default function Contractslist() {
           <h3 className="font-semibold text-base text-blueGray-700">My Contracts</h3>
         </div>
         <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-          <button className="bg-sky-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
+          <Link to='contracts'><button className="bg-sky-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button></Link>
         </div>
       </div>
     </div>

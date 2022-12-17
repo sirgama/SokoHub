@@ -32,16 +32,15 @@ export default function Farms() {
 						<td className="p-3">
 							<div className="flex align-items-center">
 								<div className="ml-3">
-									<div className="">Appple</div>
-									<div className="text-gray-300">mail@rgmail.com</div>
+									<div className="text-gray-300">Limuru</div>
 								</div>
 							</div>
 						</td>
 						<td className="p-3">
-							Technology
+							120
 						</td>
 						<td className="p-3 font-bold">
-							200.00$
+							184
 						</td>
 						<td className="p-3">
 							<span className="bg-green-400 text-gray-50 rounded-md px-2">available</span>
@@ -49,12 +48,6 @@ export default function Farms() {
 						<td className="p-3 ">
 							<a href="#" className="text-gray-400 hover:text-gray-100 mr-2">
 								<i className="material-icons-outlined text-base">2</i>
-							</a>
-                            <a href="#" className="text-gray-400 hover:text-gray-100 mr-2">
-								<i className="material-icons-outlined text-base">Edit</i>
-							</a>
-                            <a href="#" className="text-gray-400 hover:text-gray-100 mr-2">
-								<i className="material-icons-outlined text-base">Remove</i>
 							</a>
 							
 						</td>
